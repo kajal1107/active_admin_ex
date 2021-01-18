@@ -1,0 +1,6 @@
+development:
+  database: active_admin_development
+  adapter:  postgresql
+  username: postgres
+  password: 12345678
+  host:     localhost 

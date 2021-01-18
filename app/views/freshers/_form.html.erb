@@ -1,0 +1,82 @@
+<%= form_with model: @fresher do |form| %>
+  <div>
+    <%= form.label :FullName %><br>
+    <%= form.text_field :name %>
+  </div>
+  <div>
+    <%= form.label :Email %><br>
+    <%= form.text_field :email %><br>
+  </div>
+  <div>
+    <%= form.label :Gender %><br>
+    <%= form.select :gender, option: ['Male', 'Female'] %><br>
+  </div>
+  <div>
+    <%= form.label :Contact %><br>
+    <%= form.text_field :contact %><br>
+  </div>
+  <div>
+    <%= form.label :Highest_Qualification %><br>
+    <%= form.select :highest_qualification, option: ['HSC','SSC','Diploma','Graduation','Post Graduation','Phd' ] %><br>
+  </div>
+  <div>
+    <%= form.label :Branch %><br>
+    <%= form.text_field :branch %><br>
+  </div>
+  <div>
+    <%= form.label :college %><br>
+    <%= form.text_field :college %><br>
+  </div>
+  <div>
+    <%= form.label :passout_year %><br>
+    <%= form.text_field :passout_year %><br>
+  </div>
+  <div>
+    <%= form.label :current_location %><br>
+    <%= form.text_field :current_location %><br>
+  </div>
+  <div>
+    <%= form.label :resume %><br>
+    <%= form.file_field :resume %><br>
+  </div>
+  <div>
+    <%= form.label :note %><br>
+    <%= form.text_area :note %><br>
+  </div>
+  <div>
+    <%= form.label :status %><br>
+    <%= form.text_field :status %><br>
+  </div>
+  <div>
+    <%= form.label :schedule_at %><br>
+    <%= form.datetime_field :schedule_at %><br>
+  </div>
+  <div>
+    <%= form.label :interviewer %><br>
+    <%= form.text_field :interviewer %><br>
+  </div>
+  <div>
+    <%= form.label :admin_note %><br>
+    <%= form.text_area :admin_note %><br>
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+
+<!-- <script type="text/javascript">
+  $(function() { 
+   $('#datepicker').datepicker( {
+        changeMonth: false,
+        changeYear: true,
+        showButtonPanel: false,
+        dateFormat: 'yy',
+        onClose: function(dateText, inst) { 
+              $(this).datepicker('setDate', new Date('2017'));
+        }
+    }).focus(function () {
+                $(".ui-datepicker-month").hide();
+                $(".ui-datepicker-calendar").hide();
+            });
+});
+</script> -->
