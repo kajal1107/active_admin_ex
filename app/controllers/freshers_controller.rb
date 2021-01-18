@@ -6,8 +6,7 @@ class FreshersController < ApplicationController
 	def create
 		@fresher = Fresher.new(fresher_params)
 		if @fresher.save
-	    flash[:notice] = "Submitted successfully"
-	    redirect_to action: 'new'
+	    redirect_to root_path, flash: {notice: "Form submitted successfully"}
 		else
 			render 'new'
 		end
