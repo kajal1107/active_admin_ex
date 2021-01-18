@@ -1,93 +1,95 @@
-<%= form_with model: @experience do |form| %>
-  <div>
-    <%= form.label :FullName %><br>
-    <%= form.text_field :name %>
-  </div>
-  <div>
-    <%= form.label :Email %><br>
-    <%= form.text_field :email %><br>
-  </div>
-  <div>
-    <%= form.label :Gender %><br>
-    <%= form.select :gender, option: ['Male', 'Female'] %><br>
-  </div>
-  <div>
-    <%= form.label :Contact %><br>
-    <%= form.text_field :contact %><br>
-  </div>
-   <div>
-    <%= form.label :experience %><br>
-    <%= form.text_field :experience %><br>
-  </div>
-  <div>
-    <%= form.label :Highest_Qualification %><br>
-    <%= form.select :highest_qualification, option: ['HSC','SSC','Diploma','Graduation','Post Graduation','Phd' ]  %><br>
-  </div>
-  <div>
-    <%= form.label :Branch %><br>
-    <%= form.text_field :branch %><br>
-  </div>
-  <div>
-    <%= form.label :apply_for %><br>
-    <%= form.select :apply_for, option: ['RUBY ON RAILS','PYTHON','FRONT-END DEVELOPER', 'DESIGNER','HR','WEB DESIGNER','GRAPHICS DESIGNER','NETWORK ADMINISTRATOR','OFFICE ADMINISTRATOR','QA ENGINEER','OTHER'] %><br>
-  </div>
-  <div>
-    <%= form.label :current_company %><br>
-    <%= form.text_field :current_company %><br>
-  </div>
-  <div>
-    <%= form.label :current_location %><br>
-    <%= form.text_field :current_location %><br>
-  </div>
-  <div>
-    <%= form.label :resume %><br>
-    <%= form.file_field :resume %><br>
-  </div>
-  <div>
-    <%= form.label :note %><br>
-    <%= form.text_area :note %><br>
-  </div>
-  <div>
-    <%= form.label :status %><br>
-    <%= form.text_field :status %><br>
-  </div>
-  <div>
-    <%= form.label :interview_type %><br>
-    <%= form.select :interview_type, option: ['Skype', 'Telephonic','Face To Face'] %><br>
-  </div>
-  <div>
-    <%= form.label :current_ctc %><br>
-    <%= form.text_field :current_ctc %><br>
-  </div>
-  <div>
-    <%= form.label :expected_ctc %><br>
-    <%= form.text_field :expected_ctc %><br>
-  </div>
-  <div>
-    <%= form.label :expected_negotiable %><br>
-    <%= form.text_field :expected_negotiable %><br>
-  </div>
-  <div>
-    <%= form.label :notice_period %><br>
-    <%= form.text_field :notice_period %><br>
-  </div>
-  <div>
-    <%= form.label :notice_period_negotiable %><br>
-    <%= form.text_field :notice_period_negotiable %><br>
-  </div>
-  <div>
-		<%= form.label :schedule_at %><br>
-    <%= form.datetime_field :schedule_at %><br>
-  </div>
-  <div>
-    <%= form.label :interviewer %><br>
-    <%= form.text_field :interviewer %><br>
-  </div>
-  <div>
-    <%= form.label :admin_note %><br>
-    <%= form.text_area :admin_note %><br>
-  </div>
-  <div>
-    <%= form.submit %>
-  </div>
-<% end %>
+<div class="container-fluid">
+  <%= form_with model: @experience do |form| %>
+    <div>
+      <%= form.label :FullName, class: 'col-md-3 col-form-label' %>
+      <%= form.text_field :name, required: true %>
+    </div>
+    <div>
+      <%= form.label :Email, class: 'col-md-3 col-form-label' %>
+      <%= form.text_field :email, required: true %>
+    </div>
+    <div>
+      <%= form.label :Gender, class: 'col-md-3 col-form-label' %>
+      <%= form.select :gender, option: ['Male', 'Female'] %>
+    </div>
+    <div>
+      <%= form.label :Contact, class: 'col-md-3 col-form-label' %>
+      <%= form.text_field :contact, required: true %>
+    </div>
+     <div>
+      <%= form.label :experience, class: 'col-md-3 col-form-label' %>
+      <%= form.text_field :experience %>
+    </div>
+    <div>
+      <%= form.label :Highest_Qualification, class: 'col-md-3 col-form-label' %>
+      <%= form.select :highest_qualification, option: ['HSC','SSC','Diploma','Graduation','Post Graduation','Phd' ]  %>
+    </div>
+    <div>
+      <%= form.label :Branch, class: 'col-md-3 col-form-label' %>
+      <%= form.text_field :branch %>
+    </div>
+    <div>
+      <%= form.label :apply_for, class: 'col-md-3 col-form-label' %>
+      <%= form.select :apply_for, option: ['RUBY ON RAILS','PYTHON','FRONT-END DEVELOPER', 'DESIGNER','HR','WEB DESIGNER','GRAPHICS DESIGNER','NETWORK ADMINISTRATOR','OFFICE ADMINISTRATOR','QA ENGINEER','OTHER'] %>
+    </div>
+    <div>
+      <%= form.label :current_company, class: 'col-md-3 col-form-label' %>
+      <%= form.text_field :current_company %>
+    </div>
+    <div>
+      <%= form.label :current_location, class: 'col-md-3 col-form-label' %>
+      <%= form.text_field :current_location %>
+    </div>
+    <div>
+      <%= form.label :resume, class: 'col-md-3 col-form-label' %>
+      <%= form.file_field :resume, required: true %>
+    </div>
+    <div>
+      <%= form.label :note, class: 'col-md-3 col-form-label' %>
+      <%= form.text_area :note %>
+    </div>
+    <div>
+      <%= form.label :status, class: 'col-md-3 col-form-label' %>
+      <%= form.text_field :status %>
+    </div>
+    <div>
+      <%= form.label :interview_type, class: 'col-md-3 col-form-label' %>
+      <%= form.select :interview_type, option: ['Skype', 'Telephonic','Face To Face'] %>
+    </div>
+    <div>
+      <%= form.label :current_ctc, class: 'col-md-3 col-form-label' %>
+      <%= form.text_field :current_ctc %>
+    </div>
+    <div>
+      <%= form.label :expected_ctc, class: 'col-md-3 col-form-label' %>
+      <%= form.text_field :expected_ctc %>
+    </div>
+    <div>
+      <%= form.label :expected_negotiable, class: 'col-md-3 col-form-label' %>
+      <%= form.text_field :expected_negotiable %>
+    </div>
+    <div>
+      <%= form.label :notice_period, class: 'col-md-3 col-form-label' %>
+      <%= form.text_field :notice_period, required: true %>
+    </div>
+    <div>
+      <%= form.label :notice_period_negotiable, class: 'col-md-3 col-form-label' %>
+      <%= form.text_field :notice_period_negotiable %>
+    </div>
+    <div>
+  		<%= form.label :schedule_at, class: 'col-md-3 col-form-label' %>
+      <%= form.datetime_field :schedule_at %>
+    </div>
+    <div>
+      <%= form.label :interviewer, class: 'col-md-3 col-form-label' %>
+      <%= form.text_field :interviewer %>
+    </div>
+    <div>
+      <%= form.label :admin_note, class: 'col-md-3 col-form-label' %>
+      <%= form.text_area :admin_note %>
+    </div>
+    <div class="col-md-4 form-group text-center ">
+      <%= form.submit "Submit Profile", class: 'btn btn-primary' %>
+    </div>
+  <% end %>
+</div>
