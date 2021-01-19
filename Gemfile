@@ -19,9 +19,7 @@ gem 'turbolinks', '~> 5'
 
 gem 'pg'
 gem 'pry'
-#gem 'client_side_validations'
-#gem 'activeadmin'
-
+gem 'activeadmin'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

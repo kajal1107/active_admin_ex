@@ -3,16 +3,14 @@
     <div class="form-group row">
       <label for="colFormLabel" class="col-sm-2 col-form-label">Full Name</label>
       <div class="col-sm-10">
-        <%= form.text_field :name %>
-        <p class='error-messages'><%= show_errors(@fresher, :name) %></p>
+        <%= form.text_field :name, required: true %>
       </div>  
     </div>
     
     <div class="form-group row">
       <label for="colFormLabel" class="col-sm-2 col-form-label">Email</label>
       <div class="col-sm-10">
-        <%= form.text_field :email %>
-        <p class='error-messages'><%= show_errors(@fresher, :email) %></p>
+        <%= form.text_field :email, required: true %>
       </div>
     </div>
 
@@ -20,15 +18,13 @@
       <label for="colFormLabel" class="col-sm-2 col-form-label">Gender</label>
       <div class="col-sm-10">
         <%= form.select :gender, option: ['Male', 'Female'] %>
-        <p class='error-messages'><%= show_errors(@fresher, :gender) %></p>
       </div>
     </div>
     
     <div class="form-group row">
       <label for="colFormLabel" class="col-sm-2 col-form-label">Contact</label>
       <div class="col-sm-10">
-        <%= form.text_field :contact %>
-        <p class='error-messages'><%= show_errors(@fresher, :contact) %></p>
+        <%= form.text_field :contact, required: true %>
       </div>
     </div>
 
@@ -36,54 +32,48 @@
       <label for="colFormLabel" class="col-sm-2 col-form-label">Highest Qualification</label>
       <div class="col-sm-10">
         <%= form.select :highest_qualification, option: ['HSC','SSC','Diploma','Graduation','Post Graduation','Phd' ] %>
-        <p class='error-messages'><%= show_errors(@fresher, :highest_qualification) %></p>
       </div>
     </div>
 
     <div class="form-group row">
       <label for="colFormLabel" class="col-sm-2 col-form-label">Branch</label>
       <div class="col-sm-10">
-        <%= form.text_field :branch %>
-        <p class='error-messages'><%= show_errors(@fresher, :branch) %></p>
+        <%= form.text_field :branch, required: true %>
       </div>
     </div>
 
     <div class="form-group row">
       <label for="colFormLabel" class="col-sm-2 col-form-label">College</label>
       <div class="col-sm-10">
-        <%= form.text_field :college %>
-        <p class='error-messages'><%= show_errors(@fresher, :college) %></p>
+        <%= form.text_field :college, required: true %>
       </div>
     </div>
 
     <div class="form-group row">
       <label for="colFormLabel" class="col-sm-2 col-form-label">Passout Year</label>
       <div class="col-sm-10">
-        <%= form.text_field :passout_year %>
-        <p class='error-messages'><%= show_errors(@fresher, :passout_year) %></p>
+        <%= form.text_field :passout_year, required: true %>
       </div>
     </div>    
 
     <div class="form-group row">
       <label for="colFormLabel" class="col-sm-2 col-form-label">Current Location</label>
       <div class="col-sm-10">
-        <%= form.text_field :current_location %>
-        <p class='error-messages'><%= show_errors(@fresher, :current_location) %></p>
+        <%= form.text_field :current_location, required: true %>
       </div>
     </div> 
 
     <div class="form-group row">
       <label for="colFormLabel" class="col-sm-2 col-form-label">Resume</label>
       <div class="col-sm-10">
-        <%= form.text_field :resume %>
-        <p class='error-messages'><%= show_errors(@fresher, :resume) %></p>
+        <%= form.file_field :resume, required: true %>
       </div>
     </div> 
     
     <div class="form-group row">
       <label for="colFormLabel" class="col-sm-2 col-form-label">Note</label>
       <div class="col-sm-10">
-        <%= form.text_field :note %>
+        <%= form.text_area :note %>
       </div>
     </div> 
 
@@ -111,7 +101,7 @@
     <div class="form-group row">
       <label for="colFormLabel" class="col-sm-2 col-form-label">Admin Note</label>
       <div class="col-sm-10">
-        <%= form.text_field :admin_note %>
+        <%= form.text_area :admin_note %>
       </div>
     </div> 
 
