@@ -1,106 +1,173 @@
 <div class="container-fluid">
   <%= form_with model: @experience do |form| %>
-    <div>
-      <%= form.label :FullName, class: 'col-md-3 col-form-label' %>
-      <%= form.text_field :name%>
-      <p class='error-messages'><%= show_errors(@experience, :name) %></p>
+    <div class="form-group row">
+      <label for="colFormLabel" class="col-sm-2 col-form-label">Full Name</label>
+      <div class="col-sm-10">
+        <%= form.text_field :name %>
+        <p class='error-messages'><%= show_errors(@experience, :name) %></p>
+      </div>  
     </div>
-    <div>
-      <%= form.label :Email, class: 'col-md-3 col-form-label' %>
-      <%= form.text_field :email%>
-      <p class='error-messages'><%= show_errors(@experience, :email) %></p>
+    
+    <div class="form-group row">
+      <label for="colFormLabel" class="col-sm-2 col-form-label">Email</label>
+      <div class="col-sm-10">
+        <%= form.text_field :email %>
+        <p class='error-messages'><%= show_errors(@experience, :email) %></p>
+      </div>
     </div>
-    <div>
-      <%= form.label :Gender, class: 'col-md-3 col-form-label' %>
-      <%= form.select :gender, option: ['Male', 'Female'] %>
+
+    <div class="form-group row">
+      <label for="colFormLabel" class="col-sm-2 col-form-label">Gender</label>
+      <div class="col-sm-10">
+        <%= form.select :gender, option: ['Male', 'Female'] %>
+        <p class='error-messages'><%= show_errors(@experience, :gender) %></p>
+      </div>
     </div>
-    <div>
-      <%= form.label :Contact, class: 'col-md-3 col-form-label' %>
-      <%= form.text_field :contact%>
-      <p class='error-messages'><%= show_errors(@experience, :contact) %></p>
+
+    <div class="form-group row">
+      <label for="colFormLabel" class="col-sm-2 col-form-label">Contact</label>
+      <div class="col-sm-10">
+        <%= form.text_field :contact %>
+        <p class='error-messages'><%= show_errors(@experience, :contact) %></p>
+      </div>
     </div>
-     <div>
-      <%= form.label :experience, class: 'col-md-3 col-form-label' %>
-      <%= form.text_field :experience %>
-      <p class='error-messages'><%= show_errors(@experience, :experience) %></p>
+
+    <div class="form-group row">
+      <label for="colFormLabel" class="col-sm-2 col-form-label">Experience</label>
+      <div class="col-sm-10">
+        <%= form.text_field :experience %>
+        <p class='error-messages'><%= show_errors(@experience, :experience) %></p>
+      </div>
     </div>
-    <div>
-      <%= form.label :Highest_Qualification, class: 'col-md-3 col-form-label' %>
-      <%= form.select :highest_qualification, option: ['HSC','SSC','Diploma','Graduation','Post Graduation','Phd' ]  %>
+
+    <div class="form-group row">
+      <label for="colFormLabel" class="col-sm-2 col-form-label">Highest Qualification</label>
+      <div class="col-sm-10">
+        <%= form.select :highest_qualification, option: ['HSC','SSC','Diploma','Graduation','Post Graduation','Phd' ] %>
+        <p class='error-messages'><%= show_errors(@experience, :highest_qualification) %></p>
+      </div>
     </div>
-    <div>
-      <%= form.label :Branch, class: 'col-md-3 col-form-label' %>
-      <%= form.text_field :branch %>
-      <p class='error-messages'><%= show_errors(@experience, :branch) %></p>
+
+    <div class="form-group row">
+      <label for="colFormLabel" class="col-sm-2 col-form-label">Branch</label>
+      <div class="col-sm-10">
+        <%= form.text_field :branch %>
+        <p class='error-messages'><%= show_errors(@experience, :branch) %></p>
+      </div>
     </div>
-    <div>
-      <%= form.label :apply_for, class: 'col-md-3 col-form-label' %>
-      <%= form.select :apply_for, option: ['RUBY ON RAILS','PYTHON','FRONT-END DEVELOPER', 'DESIGNER','HR','WEB DESIGNER','GRAPHICS DESIGNER','NETWORK ADMINISTRATOR','OFFICE ADMINISTRATOR','QA ENGINEER','OTHER'] %>
+
+    <div class="form-group row">
+      <label for="colFormLabel" class="col-sm-2 col-form-label">Apply For</label>
+      <div class="col-sm-10">
+        <%= form.select :apply_for, option: ['RUBY ON RAILS','PYTHON','FRONT-END DEVELOPER', 'DESIGNER','HR','WEB DESIGNER','GRAPHICS DESIGNER','NETWORK ADMINISTRATOR','OFFICE ADMINISTRATOR','QA ENGINEER','OTHER'] %>
+        <p class='error-messages'><%= show_errors(@experience, :apply_for) %></p>
+      </div>
     </div>
-    <div>
-      <%= form.label :current_company, class: 'col-md-3 col-form-label' %>
-      <%= form.text_field :current_company %>
-      <p class='error-messages'><%= show_errors(@experience, :current_company) %></p>
+
+    <div class="form-group row">
+      <label for="colFormLabel" class="col-sm-2 col-form-label">Current Company</label>
+      <div class="col-sm-10">
+        <%= form.text_field :current_company %>
+        <p class='error-messages'><%= show_errors(@experience, :current_company) %></p>
+      </div>
     </div>
-    <div>
-      <%= form.label :current_location, class: 'col-md-3 col-form-label' %>
-      <%= form.text_field :current_location %>
-      <p class='error-messages'><%= show_errors(@experience, :current_location) %></p>
+
+    <div class="form-group row">
+      <label for="colFormLabel" class="col-sm-2 col-form-label">Current Location</label>
+      <div class="col-sm-10">
+        <%= form.text_field :current_location %>
+        <p class='error-messages'><%= show_errors(@experience, :current_location) %></p>
+      </div>
+    </div>    
+
+    <div class="form-group row">
+      <label for="colFormLabel" class="col-sm-2 col-form-label">Resume</label>
+      <div class="col-sm-10">
+        <%= form.text_field :resume %>
+        <p class='error-messages'><%= show_errors(@experience, :resume) %></p>
+      </div>
+    </div> 
+    
+    <div class="form-group row">
+      <label for="colFormLabel" class="col-sm-2 col-form-label">Note</label>
+      <div class="col-sm-10">
+        <%= form.text_field :note %>
+        <p class='error-messages'><%= show_errors(@experience, :note) %></p>
+      </div>
+    </div> 
+
+    <div class="form-group row">
+      <label for="colFormLabel" class="col-sm-2 col-form-label">Status</label>
+      <div class="col-sm-10">
+        <%= form.select :status, option: ['PENDING', 'ON HOLD', 'NOT RELEVANT', 'IN PROCESS', 'SCHEDULED', 'DISQUALIFIED', 'REJECTED','FIRST ROUND', 'SECOND ROUND','INTERVIEW ROUND','MACHINE TEST', 'HR ROUND', 'SELECTED', 'CONFIRMED', 'JOINED' ] %>
+        <p class='error-messages'><%= show_errors(@experience, :status) %></p>
+      </div>
+    </div> 
+
+     <div class="form-group row">
+      <label for="colFormLabel" class="col-sm-2 col-form-label">Interview Type</label>
+      <div class="col-sm-10">
+        <%= form.select :interview_type, option: ['Skype', 'Telephonic','Face To Face'] %>
+        <p class='error-messages'><%= show_errors(@experience, :interview_type) %></p>
+      </div>
     </div>
-    <div>
-      <%= form.label :resume, class: 'col-md-3 col-form-label' %>
-      <%= form.file_field :resume%>
-      <p class='error-messages'><%= show_errors(@experience, :resume) %></p>
+
+    <div class="form-group row">
+      <label for="colFormLabel" class="col-sm-2 col-form-label">Current ctc</label>
+      <div class="col-sm-10">
+        <%= form.text_field :current_ctc %>
+        <p class='error-messages'><%= show_errors(@experience, :current_ctc) %></p>
+      </div>
     </div>
-    <div>
-      <%= form.label :note, class: 'col-md-3 col-form-label' %>
-      <%= form.text_area :note %>
-    </div>
-    <div>
-      <%= form.label :status, class: 'col-md-3 col-form-label' %>
-      <%= form.text_field :status %>
-    </div>
-    <div>
-      <%= form.label :interview_type, class: 'col-md-3 col-form-label' %>
-      <%= form.select :interview_type, option: ['Skype', 'Telephonic','Face To Face'] %>
-    </div>
-    <div>
-      <%= form.label :current_ctc, class: 'col-md-3 col-form-label' %>
-      <%= form.text_field :current_ctc %>
-      <p class='error-messages'><%= show_errors(@experience, :current_ctc) %></p>
-    </div>
-    <div>
-      <%= form.label :expected_ctc, class: 'col-md-3 col-form-label' %>
-      <%= form.text_field :expected_ctc %>
-      <p class='error-messages'><%= show_errors(@experience, :expected_ctc) %></p>
-    </div>
-    <div>
-      <%= form.label :expected_negotiable, class: 'col-md-3 col-form-label' %>
-      <%= form.text_field :expected_negotiable %>
-    </div>
-    <div>
-      <%= form.label :notice_period, class: 'col-md-3 col-form-label' %>
-      <%= form.text_field :notice_period%>
-      <p class='error-messages'><%= show_errors(@experience, :notice_period) %></p>
-    </div>
-    <div>
-      <%= form.label :notice_period_negotiable, class: 'col-md-3 col-form-label' %>
-      <%= form.text_field :notice_period_negotiable %>
-    </div>
-    <div>
-  		<%= form.label :schedule_at, class: 'col-md-3 col-form-label' %>
-      <%= form.datetime_field :schedule_at %>
-    </div>
-    <div>
-      <%= form.label :interviewer, class: 'col-md-3 col-form-label' %>
-      <%= form.text_field :interviewer %>
-    </div>
-    <div>
-      <%= form.label :admin_note, class: 'col-md-3 col-form-label' %>
-      <%= form.text_area :admin_note %>
-    </div>
-    <div class="col-md-4 form-group text-center ">
-      <%= form.submit "Submit Profile", class: 'btn btn-primary' %>
-    </div>
+
+    <div class="form-group row">
+      <label for="colFormLabel" class="col-sm-2 col-form-label">Expected ctc</label>
+      <div class="col-sm-10">
+        <%= form.text_field :expected_ctc %>
+        <p class='error-messages'><%= show_errors(@experience, :expected_ctc) %></p>
+      </div>
+    </div> 
+
+    <div class="form-group row">
+      <label for="colFormLabel" class="col-sm-2 col-form-label">Notice Period</label>
+      <div class="col-sm-10">
+        <%= form.text_field :notice_period %>
+        <p class='error-messages'><%= show_errors(@experience, :notice_period) %></p>
+      </div>
+    </div> 
+
+    <div class="form-group row">
+      <label for="colFormLabel" class="col-sm-2 col-form-label">Notice period Negotiable</label>
+      <div class="col-sm-10">
+        <%= form.text_field :notice_period_negotiable %>
+      </div>
+    </div> 
+    
+    <div class="form-group row">
+      <label for="colFormLabel" class="col-sm-2 col-form-label">Schedule At</label>
+      <div class="col-sm-10">
+        <%= form.text_field :schedule_at %>
+      </div>
+    </div> 
+    
+    <div class="form-group row">
+      <label for="colFormLabel" class="col-sm-2 col-form-label">Interviewer</label>
+      <div class="col-sm-10">
+        <%= form.text_field :interviewer %>
+      </div>
+    </div> 
+
+    <div class="form-group row">
+      <label for="colFormLabel" class="col-sm-2 col-form-label">Admin Note</label>
+      <div class="col-sm-10">
+        <%= form.text_field :admin_note %>
+      </div>
+    </div> 
+
+    <div class="form-group row">
+      <div class="col-sm-10">
+        <%= form.submit "Submit Profile", class: 'btn btn-primary' %>
+      </div>
+    </div> 
   <% end %>
 </div>
