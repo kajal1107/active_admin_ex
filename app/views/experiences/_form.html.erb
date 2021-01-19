@@ -1,35 +1,35 @@
 <div class="container-fluid">
   <%= form_with model: @experience do |form| %>
     <div class="form-group row">
-      <label for="colFormLabel" class="col-sm-2 col-form-label">Full Name</label>
+      <label for="colFormLabel" class="col-sm-2 col-form-label required-field">Full Name</label>
       <div class="col-sm-10">
         <%= form.text_field :name, required: true %>
       </div>  
     </div>
     
     <div class="form-group row">
-      <label for="colFormLabel" class="col-sm-2 col-form-label">Email</label>
+      <label for="colFormLabel" class="col-sm-2 col-form-label required-field">Email</label>
       <div class="col-sm-10">
         <%= form.text_field :email, required: true  %>
       </div>
     </div>
 
     <div class="form-group row">
-      <label for="colFormLabel" class="col-sm-2 col-form-label">Gender</label>
+      <label for="colFormLabel" class="col-sm-2 col-form-label required-field">Gender</label>
       <div class="col-sm-10">
         <%= form.select :gender, option: ['Male', 'Female'] %>
       </div>
     </div>
 
     <div class="form-group row">
-      <label for="colFormLabel" class="col-sm-2 col-form-label">Contact</label>
+      <label for="colFormLabel" class="col-sm-2 col-form-label required-field">Contact</label>
       <div class="col-sm-10">
         <%= form.text_field :contact, required: true  %>
       </div>
     </div>
 
     <div class="form-group row">
-      <label for="colFormLabel" class="col-sm-2 col-form-label">Experience</label>
+      <label for="colFormLabel" class="col-sm-2 col-form-label required-field">Experience</label>
       <div class="col-sm-10">
         <%= form.text_field :experience, required: true  %>
       </div>
@@ -43,7 +43,7 @@
     </div>
 
     <div class="form-group row">
-      <label for="colFormLabel" class="col-sm-2 col-form-label">Branch</label>
+      <label for="colFormLabel" class="col-sm-2 col-form-label required-field">Branch</label>
       <div class="col-sm-10">
         <%= form.text_field :branch, required: true  %>
       </div>
@@ -57,21 +57,21 @@
     </div>
 
     <div class="form-group row">
-      <label for="colFormLabel" class="col-sm-2 col-form-label">Current Company</label>
+      <label for="colFormLabel" class="col-sm-2 col-form-label required-field">Current Company</label>
       <div class="col-sm-10">
         <%= form.text_field :current_company, required: true  %>
       </div>
     </div>
 
     <div class="form-group row">
-      <label for="colFormLabel" class="col-sm-2 col-form-label">Current Location</label>
+      <label for="colFormLabel" class="col-sm-2 col-form-label required-field">Current Location</label>
       <div class="col-sm-10">
         <%= form.text_field :current_location, required: true  %>
       </div>
     </div>    
 
     <div class="form-group row">
-      <label for="colFormLabel" class="col-sm-2 col-form-label">Resume</label>
+      <label for="colFormLabel" class="col-sm-2 col-form-label required-field">Resume</label>
       <div class="col-sm-10">
         <%= form.file_field :resume, required: true  %>
       </div>
@@ -85,35 +85,21 @@
     </div> 
 
     <div class="form-group row">
-      <label for="colFormLabel" class="col-sm-2 col-form-label">Status</label>
-      <div class="col-sm-10">
-        <%= form.select :status, option: ['PENDING', 'ON HOLD', 'NOT RELEVANT', 'IN PROCESS', 'SCHEDULED', 'DISQUALIFIED', 'REJECTED','FIRST ROUND', 'SECOND ROUND','INTERVIEW ROUND','MACHINE TEST', 'HR ROUND', 'SELECTED', 'CONFIRMED', 'JOINED' ] %>
-      </div>
-    </div> 
-
-     <div class="form-group row">
-      <label for="colFormLabel" class="col-sm-2 col-form-label">Interview Type</label>
-      <div class="col-sm-10">
-        <%= form.select :interview_type, option: ['Skype', 'Telephonic','Face To Face'] %>
-      </div>
-    </div>
-
-    <div class="form-group row">
-      <label for="colFormLabel" class="col-sm-2 col-form-label">Current ctc</label>
+      <label for="colFormLabel" class="col-sm-2 col-form-label required-field">Current ctc</label>
       <div class="col-sm-10">
         <%= form.text_field :current_ctc, required: true  %>
       </div>
     </div>
 
     <div class="form-group row">
-      <label for="colFormLabel" class="col-sm-2 col-form-label">Expected ctc</label>
+      <label for="colFormLabel" class="col-sm-2 col-form-label required-field">Expected ctc</label>
       <div class="col-sm-10">
         <%= form.text_field :expected_ctc, required: true  %>
       </div>
     </div> 
 
     <div class="form-group row">
-      <label for="colFormLabel" class="col-sm-2 col-form-label">Notice Period</label>
+      <label for="colFormLabel" class="col-sm-2 col-form-label required-field">Notice Period</label>
       <div class="col-sm-10">
         <%= form.text_field :notice_period, required: true  %>
       </div>
@@ -123,27 +109,6 @@
       <label for="colFormLabel" class="col-sm-2 col-form-label">Notice period Negotiable</label>
       <div class="col-sm-10">
         <%= form.text_field :notice_period_negotiable %>
-      </div>
-    </div> 
-    
-    <div class="form-group row">
-      <label for="colFormLabel" class="col-sm-2 col-form-label">Schedule At</label>
-      <div class="col-sm-10">
-        <%= form.text_field :schedule_at %>
-      </div>
-    </div> 
-    
-    <div class="form-group row">
-      <label for="colFormLabel" class="col-sm-2 col-form-label">Interviewer</label>
-      <div class="col-sm-10">
-        <%= form.text_field :interviewer %>
-      </div>
-    </div> 
-
-    <div class="form-group row">
-      <label for="colFormLabel" class="col-sm-2 col-form-label">Admin Note</label>
-      <div class="col-sm-10">
-        <%= form.text_area :admin_note %>
       </div>
     </div> 
 

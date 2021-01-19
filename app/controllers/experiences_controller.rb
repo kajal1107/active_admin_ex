@@ -6,7 +6,7 @@ class ExperiencesController < ApplicationController
 	def create
 		@experience = Experience.new(experience_params)
 		if @experience.save
-	    redirect_to root_path, flash: {notice: "Form submitted successfully"}
+	    redirect_to root_path, flash: {notice: "Submitted successfully"}
 		else
 			render 'new'
 		end

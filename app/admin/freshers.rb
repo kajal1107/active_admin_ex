@@ -9,10 +9,9 @@ ActiveAdmin.register Fresher do
   #
   # or
   #
-  # permit_params do
-  #   permitted = [:name, :email, :gender, :contact, :highest_qualification, :branch, :college, :passout_year, :current_location, :resume, :note, :status, :interview_type, :schedule_at, :interviewer, :admin_note]
-  #   permitted << :other if params[:action] == 'create' && current_user.admin?
-  #   permitted
-  # end
-  
+  permit_params do
+    permitted = [:name, :email, :gender, :contact, :highest_qualification, :branch, :college, :passout_year, :current_location, :resume, :note, :status, :interview_type, :schedule_at, :interviewer, :admin_note]
+    permitted << :other if params[:action] == 'create' && current_user.admin?
+    permitted
+  end
 end
