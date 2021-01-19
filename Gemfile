@@ -18,7 +18,8 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 
 gem 'pg'
-gem 'client_side_validations'
+gem 'pry'
+#gem 'client_side_validations'
 #gem 'activeadmin'
 
 # Use Active Storage variant

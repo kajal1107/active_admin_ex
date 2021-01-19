@@ -2,11 +2,13 @@
   <%= form_with model: @experience do |form| %>
     <div>
       <%= form.label :FullName, class: 'col-md-3 col-form-label' %>
-      <%= form.text_field :name, required: true %>
+      <%= form.text_field :name%>
+      <p class='error-messages'><%= show_errors(@experience, :name) %></p>
     </div>
     <div>
       <%= form.label :Email, class: 'col-md-3 col-form-label' %>
-      <%= form.text_field :email, required: true %>
+      <%= form.text_field :email%>
+      <p class='error-messages'><%= show_errors(@experience, :email) %></p>
     </div>
     <div>
       <%= form.label :Gender, class: 'col-md-3 col-form-label' %>
@@ -14,11 +16,13 @@
     </div>
     <div>
       <%= form.label :Contact, class: 'col-md-3 col-form-label' %>
-      <%= form.text_field :contact, required: true %>
+      <%= form.text_field :contact%>
+      <p class='error-messages'><%= show_errors(@experience, :contact) %></p>
     </div>
      <div>
       <%= form.label :experience, class: 'col-md-3 col-form-label' %>
       <%= form.text_field :experience %>
+      <p class='error-messages'><%= show_errors(@experience, :experience) %></p>
     </div>
     <div>
       <%= form.label :Highest_Qualification, class: 'col-md-3 col-form-label' %>
@@ -27,6 +31,7 @@
     <div>
       <%= form.label :Branch, class: 'col-md-3 col-form-label' %>
       <%= form.text_field :branch %>
+      <p class='error-messages'><%= show_errors(@experience, :branch) %></p>
     </div>
     <div>
       <%= form.label :apply_for, class: 'col-md-3 col-form-label' %>
@@ -35,14 +40,17 @@
     <div>
       <%= form.label :current_company, class: 'col-md-3 col-form-label' %>
       <%= form.text_field :current_company %>
+      <p class='error-messages'><%= show_errors(@experience, :current_company) %></p>
     </div>
     <div>
       <%= form.label :current_location, class: 'col-md-3 col-form-label' %>
       <%= form.text_field :current_location %>
+      <p class='error-messages'><%= show_errors(@experience, :current_location) %></p>
     </div>
     <div>
       <%= form.label :resume, class: 'col-md-3 col-form-label' %>
-      <%= form.file_field :resume, required: true %>
+      <%= form.file_field :resume%>
+      <p class='error-messages'><%= show_errors(@experience, :resume) %></p>
     </div>
     <div>
       <%= form.label :note, class: 'col-md-3 col-form-label' %>
@@ -59,10 +67,12 @@
     <div>
       <%= form.label :current_ctc, class: 'col-md-3 col-form-label' %>
       <%= form.text_field :current_ctc %>
+      <p class='error-messages'><%= show_errors(@experience, :current_ctc) %></p>
     </div>
     <div>
       <%= form.label :expected_ctc, class: 'col-md-3 col-form-label' %>
       <%= form.text_field :expected_ctc %>
+      <p class='error-messages'><%= show_errors(@experience, :expected_ctc) %></p>
     </div>
     <div>
       <%= form.label :expected_negotiable, class: 'col-md-3 col-form-label' %>
@@ -70,7 +80,8 @@
     </div>
     <div>
       <%= form.label :notice_period, class: 'col-md-3 col-form-label' %>
-      <%= form.text_field :notice_period, required: true %>
+      <%= form.text_field :notice_period%>
+      <p class='error-messages'><%= show_errors(@experience, :notice_period) %></p>
     </div>
     <div>
       <%= form.label :notice_period_negotiable, class: 'col-md-3 col-form-label' %>

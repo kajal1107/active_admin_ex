@@ -1,12 +1,14 @@
 <div class="container-fluid">
   <%= form_with model: @fresher do |form| %>
     <div>
-      <%= form.label :FullName, class: 'col-md-3 col-form-label' %>
-      <%= form.text_field :name, required: true %>
+      <%= form.label :FullName, class: 'col-md-3 col-form-label error' %>
+      <%= form.text_field :name %>
+      <p class='error-messages'><%= show_errors(@fresher, :name) %></p>
     </div>
     <div>
       <%= form.label :Email, class: 'col-md-3 col-form-label' %>
-      <%= form.text_field :email, required: true %>
+      <%= form.text_field :email %>
+     <p class='error-messages'><%= show_errors(@fresher, :email) %></p>
     </div>
     <div>
       <%= form.label :Gender, class: 'col-md-3 col-form-label' %>
@@ -14,7 +16,8 @@
     </div>
     <div>
       <%= form.label :Contact, class: 'col-md-3 col-form-label' %>
-      <%= form.text_field :contact, required: true %>
+      <%= form.text_field :contact %>
+      <p class='error-messages'><%= show_errors(@fresher, :contact) %></p>
     </div>
     <div>
       <%= form.label :Highest_Qualification, class: 'col-md-3 col-form-label' %>
@@ -23,22 +26,27 @@
     <div>
       <%= form.label :Branch, class: 'col-md-3 col-form-label' %>
       <%= form.text_field :branch %>
+      <p class='error-messages'><%= show_errors(@fresher, :branch) %></p>
     </div>
     <div>
       <%= form.label :college, class: 'col-md-3 col-form-label' %>
       <%= form.text_field :college %>
+      <p class='error-messages'><%= show_errors(@fresher, :college) %></p>
     </div>
     <div>
       <%= form.label :passout_year, class: 'col-md-3 col-form-label' %>
-      <%= form.text_field :passout_year, required: true %>
+      <%= form.text_field :passout_year %>
+      <p class='error-messages'><%= show_errors(@fresher, :passout_year) %></p>
     </div>
     <div>
       <%= form.label :current_location, class: 'col-md-3 col-form-label' %>
       <%= form.text_field :current_location %>
+      <p class='error-messages'><%= show_errors(@fresher, :current_location) %></p>
     </div>
     <div>
       <%= form.label :resume, class: 'col-md-3 col-form-label' %>
-      <%= form.file_field :resume, required: true %>
+      <%= form.file_field :resume %>
+      <p class='error-messages'><%= show_errors(@fresher, :resume) %></p>
     </div>
     <div>
       <%= form.label :note, class: 'col-md-3 col-form-label' %>
