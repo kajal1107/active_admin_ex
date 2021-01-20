@@ -1,121 +1,127 @@
 <div class="container-fluid">
-  <%= form_with model: @experience do |form| %>
-    <div class="form-group row">
-      <label for="colFormLabel" class="col-sm-2 col-form-label required-field">Full Name</label>
-      <div class="col-sm-10">
-        <%= form.text_field :name, required: true %>
-      </div>  
-    </div>
-    
-    <div class="form-group row">
-      <label for="colFormLabel" class="col-sm-2 col-form-label required-field">Email</label>
-      <div class="col-sm-10">
-        <%= form.text_field :email, required: true  %>
+  <div class="row justify-content-center align-items-center">
+    <h3>Experiences Profile</h3>
+  </div>
+  <div class="row justify-content-center align-items-center h-100 ">
+    <%= form_with model: @experience do |form| %>
+      <div class="form-group ">
+        <label for="colFormLabel" class="col-sm-2 col-form-label required-field">Full Name</label>
+        <div class="col-sm-10">
+          <%= form.text_field :name, required: true, placeholder: 'Enter Name' %>
+        </div>  
       </div>
-    </div>
+      
+      <div class="form-group ">
+        <label for="colFormLabel" class="col-sm-2 col-form-label required-field">Email</label>
+        <div class="col-sm-10">
+          <%= form.text_field :email, required: true, placeholder: 'Enter Email'  %>
+        </div>
+      </div>
 
-    <div class="form-group row">
-      <label for="colFormLabel" class="col-sm-2 col-form-label required-field">Gender</label>
-      <div class="col-sm-10">
-        <%= form.select :gender, option: ['Male', 'Female'] %>
+      <div class="form-group ">
+        <label for="colFormLabel" class="col-sm-2 col-form-label required-field">Gender</label>
+        <div class="col-sm-10">
+          <%= form.select :gender, option: ['Male', 'Female'] %>
+        </div>
       </div>
-    </div>
 
-    <div class="form-group row">
-      <label for="colFormLabel" class="col-sm-2 col-form-label required-field">Contact</label>
-      <div class="col-sm-10">
-        <%= form.text_field :contact, required: true  %>
+      <div class="form-group ">
+        <label for="colFormLabel" class="col-sm-2 col-form-label required-field">Contact</label>
+        <div class="col-sm-10">
+          <%= form.text_field :contact, required: true, placeholder: 'Enter Contact'  %>
+        </div>
       </div>
-    </div>
 
-    <div class="form-group row">
-      <label for="colFormLabel" class="col-sm-2 col-form-label required-field">Experience</label>
-      <div class="col-sm-10">
-        <%= form.text_field :experience, required: true  %>
+      <div class="form-group ">
+        <label for="colFormLabel" class="col-sm-2 col-form-label required-field">Experience</label>
+        <div class="col-sm-10">
+          <%= form.text_field :experience, required: true, placeholder: 'Enter Your Experience'  %>
+        </div>
       </div>
-    </div>
 
-    <div class="form-group row">
-      <label for="colFormLabel" class="col-sm-2 col-form-label">Highest Qualification</label>
-      <div class="col-sm-10">
-        <%= form.select :highest_qualification, option: ['HSC','SSC','Diploma','Graduation','Post Graduation','Phd' ] %>
+      <div class="form-group ">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">Highest Qualification</label>
+        <div class="col-sm-10">
+          <%= form.select :highest_qualification, option: ['HSC','SSC','Diploma','Graduation','Post Graduation','Phd' ] %>
+        </div>
       </div>
-    </div>
 
-    <div class="form-group row">
-      <label for="colFormLabel" class="col-sm-2 col-form-label required-field">Branch</label>
-      <div class="col-sm-10">
-        <%= form.text_field :branch, required: true  %>
+      <div class="form-group ">
+        <label for="colFormLabel" class="col-sm-2 col-form-label required-field">Branch</label>
+        <div class="col-sm-10">
+          <%= form.text_field :branch, required: true, placeholder: 'Enter Branch'  %>
+        </div>
       </div>
-    </div>
 
-    <div class="form-group row">
-      <label for="colFormLabel" class="col-sm-2 col-form-label">Apply For</label>
-      <div class="col-sm-10">
-        <%= form.select :apply_for, option: ['RUBY ON RAILS','PYTHON','FRONT-END DEVELOPER', 'DESIGNER','HR','WEB DESIGNER','GRAPHICS DESIGNER','NETWORK ADMINISTRATOR','OFFICE ADMINISTRATOR','QA ENGINEER','OTHER'] %>
+      <div class="form-group ">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">Apply For</label>
+        <div class="col-sm-10">
+          <%= form.select :apply_for, option: ['RUBY ON RAILS','PYTHON','FRONT-END DEVELOPER', 'DESIGNER','HR','WEB DESIGNER','GRAPHICS DESIGNER','NETWORK ADMINISTRATOR','OFFICE ADMINISTRATOR','QA ENGINEER','OTHER'] %>
+        </div>
       </div>
-    </div>
 
-    <div class="form-group row">
-      <label for="colFormLabel" class="col-sm-2 col-form-label required-field">Current Company</label>
-      <div class="col-sm-10">
-        <%= form.text_field :current_company, required: true  %>
+      <div class="form-group ">
+        <label for="colFormLabel" class="col-sm-2 col-form-label required-field">Current Company</label>
+        <div class="col-sm-10">
+          <%= form.text_field :current_company, required: true, placeholder: 'Enter Your Current Company'  %>
+        </div>
       </div>
-    </div>
 
-    <div class="form-group row">
-      <label for="colFormLabel" class="col-sm-2 col-form-label required-field">Current Location</label>
-      <div class="col-sm-10">
-        <%= form.text_field :current_location, required: true  %>
-      </div>
-    </div>    
+      <div class="form-group ">
+        <label for="colFormLabel" class="col-sm-2 col-form-label required-field">Current Location</label>
+        <div class="col-sm-10">
+          <%= form.text_field :current_location, required: true, placeholder: 'Enter Current Location'  %>
+        </div>
+      </div>    
 
-    <div class="form-group row">
-      <label for="colFormLabel" class="col-sm-2 col-form-label required-field">Resume</label>
-      <div class="col-sm-10">
-        <%= form.file_field :resume, required: true  %>
-      </div>
-    </div> 
-    
-    <div class="form-group row">
-      <label for="colFormLabel" class="col-sm-2 col-form-label">Note</label>
-      <div class="col-sm-10">
-        <%= form.text_area :note %>
-      </div>
-    </div> 
+      <div class="form-group ">
+        <label for="colFormLabel" class="col-sm-2 col-form-label required-field">Resume</label>
+        <div class="col-sm-10">
+          <%= form.file_field :resume, required: true  %>
+        </div>
+      </div> 
+      
+      <div class="form-group ">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">Note</label>
+        <div class="col-sm-10">
+          <%= form.text_area :note %>
+        </div>
+      </div> 
 
-    <div class="form-group row">
-      <label for="colFormLabel" class="col-sm-2 col-form-label required-field">Current ctc</label>
-      <div class="col-sm-10">
-        <%= form.text_field :current_ctc, required: true  %>
+      <div class="form-group ">
+        <label for="colFormLabel" class="col-sm-2 col-form-label required-field">Current ctc</label>
+        <div class="col-sm-10">
+          <%= form.text_field :current_ctc, required: true  %>
+        </div>
       </div>
-    </div>
 
-    <div class="form-group row">
-      <label for="colFormLabel" class="col-sm-2 col-form-label required-field">Expected ctc</label>
-      <div class="col-sm-10">
-        <%= form.text_field :expected_ctc, required: true  %>
-      </div>
-    </div> 
+      <div class="form-group ">
+        <label for="colFormLabel" class="col-sm-2 col-form-label required-field">Expected ctc</label>
+        <div class="col-sm-10">
+          <%= form.text_field :expected_ctc, required: true  %>
+        </div>
+      </div> 
 
-    <div class="form-group row">
-      <label for="colFormLabel" class="col-sm-2 col-form-label required-field">Notice Period</label>
-      <div class="col-sm-10">
-        <%= form.text_field :notice_period, required: true  %>
-      </div>
-    </div> 
+      <div class="form-group ">
+        <label for="colFormLabel" class="col-sm-2 col-form-label required-field">Notice Period</label>
+        <div class="col-sm-10">
+          <%= form.text_field :notice_period, required: true  %>
+        </div>
+      </div> 
 
-    <div class="form-group row">
-      <label for="colFormLabel" class="col-sm-2 col-form-label">Notice period Negotiable</label>
-      <div class="col-sm-10">
-        <%= form.text_field :notice_period_negotiable %>
-      </div>
-    </div> 
+      <div class="form-group ">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">Notice period Negotiable</label>
+        <div class="col-sm-10">
+          <%= form.text_field :notice_period_negotiable %>
+        </div>
+      </div> 
 
-    <div class="form-group row">
-      <div class="col-sm-10">
-        <%= form.submit "Submit Profile", class: 'btn btn-primary' %>
-      </div>
-    </div> 
-  <% end %>
+      <div class="form-group ">
+        <div class="col-sm-10">
+          <%= form.submit "Submit Profile", class: 'btn btn-primary' %>
+        </div>
+      </div> 
+    <% end %>
+  </div>
 </div>
+
