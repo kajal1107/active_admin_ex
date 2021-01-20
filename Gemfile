@@ -20,6 +20,8 @@ gem 'turbolinks', '~> 5'
 gem 'pg'
 gem 'pry'
 gem 'activeadmin'
+gem 'devise'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
