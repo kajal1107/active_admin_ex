@@ -1,5 +1,5 @@
 ActiveAdmin.register User do
-  permit_params :email, :password, :password_confirmation
+  permit_params :email, :password, :password_confirmation, :role
 
   index do
     selectable_column
@@ -21,6 +21,7 @@ ActiveAdmin.register User do
       f.input :email
       f.input :password
       f.input :password_confirmation
+      #f.input :is_admin, :as => :select, collection: (['admin', 'hr', 'employee'])
     end
     f.actions
   end
