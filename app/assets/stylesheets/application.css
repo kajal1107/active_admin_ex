@@ -39,3 +39,11 @@ input.btn.btn-primary.btn-lg {
 img.yuva-logo {
   background: floralwhite;
 }
+p.error {
+  display: none;
+}
+p.validation-error {
+  color: red;
+  font-size: 12px;
+}
+
