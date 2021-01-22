@@ -1,4 +1,15 @@
 ActiveAdmin.register Fresher do
+  controller do
+    def update(options={}, &block)
+      @f = Fresher.find(params[:id])
+      # You can put your send email code over here 
+      AdminMailer.admin_email(@f).deliver_now
+      super do |success, failure| 
+        block.call(success, failure) if block
+        failure.html { render :edit }
+      end
+    end
+  end
   form title: 'Interview Schedule Details' do |f|
     inputs 'Details' do
       input :status, :as => :select, collection: (['PENDING', 'ON HOLD', 'NOT RELEVANT', 'IN PROCESS', 'SCHEDULED', 'DISQUALIFIED', 'REJECTED','FIRST ROUND', 'SECOND ROUND','INTERVIEW ROUND','MACHINE TEST', 'HR ROUND', 'SELECTED', 'CONFIRMED', 'JOINED'])

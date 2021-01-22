@@ -80,13 +80,6 @@
           <%= form.file_field :resume, required: true  %>
         </div>
       </div> 
-      
-      <div class="form-group ">
-        <label for="colFormLabel" class="col-sm-2 col-form-label">Note</label>
-        <div class="col-sm-10">
-          <%= form.text_area :note %>
-        </div>
-      </div> 
 
       <div class="form-group ">
         <label for="colFormLabel" class="col-sm-2 col-form-label required-field">Current ctc</label>
@@ -110,9 +103,16 @@
       </div> 
 
       <div class="form-group ">
-        <label for="colFormLabel" class="col-sm-2 col-form-label">Notice period Negotiable</label>
+        <label for="colFormLabel" class="col-sm-2 col-form-label required-field">Notice period Negotiable</label>
         <div class="col-sm-10">
           <%= form.text_field :notice_period_negotiable %>
+        </div>
+      </div> 
+
+      <div class="form-group ">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">Note</label>
+        <div class="col-sm-10">
+          <%= form.text_area :note %>
         </div>
       </div> 
 
