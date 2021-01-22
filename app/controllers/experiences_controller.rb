@@ -17,7 +17,7 @@ class ExperiencesController < ApplicationController
 		def experience_params
 			params.require(:experience).permit(:name,:email,:gender,:contact,:experience,
 				:highest_qualification,:branch,:apply_for,:current_company,:current_location,
-				:resume,:note,:interview_type,:current_ctc,:expected_ctc,:expected_negotiable,
+				:resume,:note,:current_ctc,:expected_ctc,:expected_negotiable,
 				:notice_period,:notice_period_negotiable)
 		end
 end

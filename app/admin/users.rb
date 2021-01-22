@@ -18,9 +18,11 @@ ActiveAdmin.register User do
 
   form do |f|
     f.inputs do
+      f.input :name
       f.input :email
       f.input :password
       f.input :password_confirmation
+      f.input :is_admin, as: :boolean
     end
     f.actions
   end

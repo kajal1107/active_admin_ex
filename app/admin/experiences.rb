@@ -1,6 +1,20 @@
 ActiveAdmin.register Experience do
   form title: 'Interview Schedule Details' do |f|
     inputs 'Details' do
+      input :name
+      input :email
+      input :gender
+      input :contact
+      input :experience
+      input :highest_qualification
+      input :branch
+      input :apply_for
+      input :current_company
+      input :current_location
+      input :expected_ctc
+      input :expected_negotiable
+      input :notice_period
+      input :notice_period_negotiable
       input :status, :as => :select, collection: (['PENDING', 'ON HOLD', 'NOT RELEVANT', 'IN PROCESS', 'SCHEDULED', 'DISQUALIFIED', 'REJECTED','FIRST ROUND', 'SECOND ROUND','INTERVIEW ROUND','MACHINE TEST', 'HR ROUND', 'SELECTED', 'CONFIRMED', 'JOINED'])
       input :interview_type, :as => :select, collection: (['TELEPHONE INTERVIEW', 'FACE TO FACE INTERVIEW', 'SKYPE INTERVIEW'])
       input :interviewer, :as => :select, collection: (['Prateek Singh', 'Hemant Gupta', 'Anand Rajput', 'Sandeep Singh', 'Rohit Yadav', 'Nirmala Malviya', 'Gourav Lele', 'Manjari Mishra', 'Swati Mishra', 'Hitesh Kanwar' ])
