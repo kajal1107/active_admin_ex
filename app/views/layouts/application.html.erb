@@ -10,10 +10,9 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
-
     <nav class="navbar navbar-expand-lg navbar-light bg-light,navbar navbar-dark bg-dark">
-      <%=image_tag("yuvasoft.png")%>
-      <!-- <a class="navbar-brand" href="#">Yuvasoft</a> -->
+      <img src="<%= asset_path('yuva-logo.png') %>" width="" height="30" alt="" class='yuva-logo'> 
+      <a class="navbar-brand" href="#"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
       </button>
@@ -29,9 +28,9 @@
             <a class="nav-link" href="http://www.yuvasoftech.com/services">Service</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="btn btn-secondary dropdown-toggle" href="#" id="dropdownMenuButton" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Upload Resume</a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
               <a class="dropdown-item" href="/freshers/new">Fresher Profile</a>
               <a class="dropdown-item" href="/experiences/new">Experiences Profile</a>
             </div>

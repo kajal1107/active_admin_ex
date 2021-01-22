@@ -1,0 +1,89 @@
+<div class="container">
+  <div class="row justify-content-center align-items-center">
+    <h3>Freshers Profile</h3>    
+  </div>
+  <%= form_with model: @fresher,  html: { class: "new_profile"} do |form| %>
+    <div class="field form-group">
+      <label for="colFormLabel" class="control-label required-field">Full Name</label>
+      <div class="">
+        <%= form.text_field :name, required: true, placeholder: 'Enter Name', class: "form-control" %>
+      </div>  
+    </div>
+    
+    <div class="field form-group">
+      <label for="colFormLabel" class="control-label required-field">Email</label>
+      <div class="">
+        <%= form.text_field :email, required: true, placeholder: 'Enter Email', class: "form-control"%>
+      </div>
+    </div>
+
+    <div class="field form-group">
+      <label for="colFormLabel" class="control-label required-field">Gender</label>
+      <div class="">
+        <%= form.select :gender, Fresher::GENDER, {:prompt => false}, class: "form-control" %>
+      </div>
+    </div>
+    
+    <div class="field form-group">
+      <label for="colFormLabel" class="control-label required-field">Contact</label>
+      <div class="">
+        <%= form.text_field :contact, required: true, placeholder: 'Enter Contact', class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="field form-group">
+      <label for="colFormLabel" class="control-label required-field">Highest Qualification</label>
+      <div class="">
+        <%= form.select :highest_qualification, option: ['HSC','SSC','Diploma','Graduation','Post Graduation','Phd' ], class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="field form-group">
+      <label for="colFormLabel" class="control-label required-field">Branch</label>
+      <div class="">
+        <%= form.text_field :branch, required: true, placeholder: 'Enter Branch',class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="field form-group">
+      <label for="colFormLabel" class="control-label required-field">College</label>
+      <div class="">
+        <%= form.text_field :college, required: true, placeholder: 'Enter College', class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="field form-group">
+      <label for="colFormLabel" class="control-label required-field">Passout Year</label>
+      <div class="">
+        <%= form.text_field :passout_year, required: true, placeholder: 'Enter Passout Year', class: "form-control" %>
+      </div>
+    </div>    
+
+    <div class="field form-group">
+      <label for="colFormLabel" class="control-label required-field">Current Location</label>
+      <div class="">
+        <%= form.text_field :current_location, required: true, placeholder: 'Enter Current Location', class: "form-control" %>
+      </div>
+    </div> 
+
+    <div class="field form-group">
+      <label for="colFormLabel" class="control-label required-field">Resume</label>
+      <div class="">
+        <%= form.file_field :resume, required: true, class: "form-control" %>
+      </div>
+    </div> 
+    
+    <div class="field form-group">
+      <label for="colFormLabel" class="control-label">Note</label>
+      <div class="">
+        <%= form.text_area :note, class: "form-control" %>
+      </div>
+    </div> 
+
+    <div class="row text-center">
+      <div class="actions ">
+        <%= form.submit "Submit Profile", class: "btn btn-primary btn-lg" %>
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -21,6 +21,21 @@
 }
 
 .required-field::after { 
-	content: "*"; 
-	color: red; 
+  content: "*"; 
+  color: red; 
+}
+form.new_profile {
+  max-width: 800px;
+  margin: 30px auto 0;
+  width: 100%;
+  border-radius: 20px;
+  padding: 50px 50px 20px;
+  background: #fff;
+  box-shadow: 0px 0px 11px rgba(0,0,0,0.4);
+}
+input.btn.btn-primary.btn-lg {
+  margin-left: 15px;
+}
+img.yuva-logo {
+  background: floralwhite;
 }
